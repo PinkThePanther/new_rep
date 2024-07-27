@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive DOM Events Cheat Sheet</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Popular DOM Events Cheat Sheet</h1>
+
+  <table>
+    <tr>
+      <th>Event</th>
+      <th>Description</th>
+      <th>Can Listen To</th>
+    </tr>
+    <tr>
+      <td>click</td>
+      <td>Fires when an element is clicked</td>
+      <td>All elements</td>
+    </tr>
+    <tr>
+      <td>dblclick</td>
+      <td>Fires when an element is double-clicked</td>
+      <td>All elements</td>
+    </tr>
+    <tr>
+      <td>mouseover</td>
+      <td>Fires when the mouse pointer enters an element</td>
+      <td>All elements</td>
+    </tr>
+    <tr>
+      <td>mouseout</td>
+      <td>Fires when the mouse pointer leaves an element</td>
+      <td>All elements</td>
+    </tr>
+    <tr>
+      <td>mousemove</td>
+      <td>Fires when the mouse pointer moves over an element</td>
+      <td>All elements</td>
+    </tr>
+    <tr>
+      <td>mousedown</td>
+      <td>Fires when a mouse button is pressed down on an element</td>
+      <td>All elements</td>
+    </tr>
+    <tr>
+      <td>mouseup</td>
+      <td>Fires when a mouse button is released on an element</td>
+      <td>All elements</td>
+    </tr>
+    <tr>
+      <td>keydown</td>
+      <td>Fires when a key is pressed down</td>
+      <td>Elements that can receive keyboard input</td>
+    </tr>
+    <tr>
+      <td>keyup</td>
+      <td>Fires when a key is released</td>
+      <td>Elements that can receive keyboard input</td>
+    </tr>
+    <tr>
+      <td>keypress</td>
+      <td>Fires when a key that produces a character value is pressed down</td>
+      <td>Elements that can receive keyboard input</td>
+    </tr>
+    <tr>
+      <td>submit</td>
+      <td>Fires when a form is submitted</td>
+      <td>&lt;form&gt; element</td>
+    </tr>
+    <tr>
+      <td>change</td>
+      <td>Fires when the value of an input field changes</td>
+      <td>&lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;</td>
+    </tr>
+    <tr>
+      <td>input</td>
+      <td>Fires when the value of an input field is changed</td>
+      <td>&lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;</td>
+    </tr>
+    <tr>
+      <td>focus</td>
+      <td>Fires when an element receives focus</td>
+      <td>Elements that can receive focus</td>
+    </tr>
+    <tr>
+      <td>blur</td>
+      <td>Fires when an element loses focus</td>
+      <td>Elements that can receive focus</td>
+    </tr>
+    <tr>
+      <td>load</td>
+      <td>Fires when a resource (e.g., image, script) finishes loading</td>
+      <td>Window, images, scripts, etc.</td>
+    </tr>
+    <tr>
+      <td>unload</td>
+      <td>Fires when the window or document is unloaded</td>
+      <td>Window object</td>
+    </tr>
+    <tr>
+      <td>resize</td>
+      <td>Fires when the window or document view is resized</td>
+      <td>Window object</td>
+    </tr>
+    <tr>
+      <td>scroll</td>
+      <td>Fires when the document view or an element is scrolled</td>
+      <td>Window object, scrollable elements</td>
+    </tr>
+    <tr>
+      <td>drag</td>
+      <td>Fires when an element or text selection is being dragged</td>
+      <td>Draggable elements</td>
+    </tr>
+    <tr>
+      <td>dragstart</td>
+      <td>Fires when the user starts to drag an element or text selection</td>
+      <td>Draggable elements</td>
+    </tr>
+    <tr>
+      <td>dragover</td>
+      <td>Fires when a dragged element or text selection is being moved over a valid drop target</td>
+      <td>Drop targets</td>
+    </tr>
+    <tr>
+      <td>drop</td>
+      <td>Fires when a dragged element or text selection is dropped on a valid drop target</td>
+      <td>Drop targets</td>
+    </tr>
+    <tr>
+      <td>contextmenu</td>
+      <td>Fires when the user attempts to open a context menu (right-click menu)</td>
+      <td>All elements</td>
+    </tr>
+    <tr>
+      <td>onload</td>
+      <td>Fires when the entire page has finished loading, including all resources (images, scripts, etc.)</td>
+      <td>Window object</td>
+    </tr>
+    <tr>
+      <td>DOMContentLoaded</td>
+      <td>Fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading</td>
+      <td>Document object</td>
+    </tr>
+    <tr>
+      <td>readystatechange</td>
+      <td>Fires when the readyState property of the document changes</td>
+      <td>Document object</td>
+    </tr>
+    <tr>
+      <td>beforeunload</td>
+      <td>Fires when the window, the document, and its resources are about to be unloaded</td>
+      <td>Window object</td>
+    </tr>
+    <tr>
+      <td>hashchange</td>
+      <td>Fires when the fragment identifier (hash) of the current URL has changed</td>
+      <td>Window object</td>
+    </tr>
+    <tr>
+      <td>popstate</td>
+      <td>Fires when the window's history changes</td>
+      <td>Window object</td>
+    </tr>
+    <tr>
+      <td>online</td>
+      <td>Fires when the browser regains an internet connection</td>
+      <td>Window object</td>
+    </tr>
+    <tr>
+      <td>offline</td>
+      <td>Fires when the browser loses an internet connection</td>
+      <td>Window object</td>
+    </tr>
+    <tr>
+      <td>animationstart</td>
+      <td>Fires when a CSS animation starts</td>
+      <td>Elements with CSS animations</td>
+    </tr>
+    <tr>
+      <td>animationiteration</td>
+      <td>Fires when a CSS animation iteration completes</td>
+      <td>Elements with CSS animations</td>
+    </tr>
+    <tr>
+      <td>animationend</td>
+      <td>Fires when a CSS animation completes</td>
+      <td>Elements with CSS animations</td>
+    </tr>
+    <tr>
+      <td>transitionstart</td>
+      <td>Fires when a CSS transition starts</td>
+      <td>Elements with CSS transitions</td>
+    </tr>
+    <tr>
+      <td>transitionrun</td>
+      <td>Fires when a CSS transition runs</td>
+      <td>Elements with CSS transitions</td>
+    </tr>
+    <tr>
+      <td>transitionend</td>
+      <td>Fires when a CSS transition completes</td>
+      <td>Elements with CSS transitions</td>
+    </tr>
+  </table>
+
+  <p>Note: This cheat sheet covers a comprehensive list of DOM events, but there may be additional events available depending on the specific use case and browser support.</p>
+</body>
+</html>
